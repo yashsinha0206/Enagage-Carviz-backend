@@ -21,6 +21,6 @@ app.use('/',(req,res,next)=>{
     next()
 },AppRoutes)
 
-app.listen(env.port,()=>{
-    console.log('Server running on port ',env.port);
+app.listen(process.env.PORT,()=>{
+    console.log('Server running on port ',process.env.PORT);
 })
