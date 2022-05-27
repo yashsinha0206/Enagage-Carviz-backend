@@ -1,0 +1,1 @@
+module.exports.env = require('./_config/environment.json');

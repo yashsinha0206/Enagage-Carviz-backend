@@ -1,0 +1,6 @@
+{
+    "prefix": "mongodb",
+    "ipWithPort": "localhost:27017",
+    "authSource": "engage?authSource=engage",
+    "port": 8000
+}
