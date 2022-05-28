@@ -1,4 +1,4 @@
-# Enagage-Cariz-backend
+# Enagage-CarWiz-backend
 Backend Repository for Engage'22 project
 
 
