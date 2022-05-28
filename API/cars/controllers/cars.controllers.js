@@ -1,5 +1,6 @@
 const { Cars } = require("../models/cars.models")
 
+// API Controller to get all the data from db at once
 exports.GET_CARS_DATA = async (req,res) => {
 
     let cars_data = null
@@ -15,7 +16,13 @@ exports.GET_CARS_DATA = async (req,res) => {
 }
 
 
-// companies vs no_of_cars + price filter
+
+// API Controller to get the data of
+// companies vs number of cars. Filters of 
+// minimum price and maximum price, company are also provided
+// to filter out the data according to user 
+// requirements. 
+
 exports.NO_OF_CARS = async (req, res) => {
 
     query = []
@@ -59,7 +66,12 @@ exports.NO_OF_CARS = async (req, res) => {
     return res.status(200).json(data)
 }
 
-// Model name of each company car and its variant (list)
+
+
+// API Controller to get the list of all
+// cars of any specific company. Here
+// only company's name, model, variant, price
+// is sent to the frontend
 
 exports.COMPANY_CARS_LIST = async (req, res) => {
 
@@ -95,6 +107,10 @@ exports.COMPANY_CARS_LIST = async (req, res) => {
 
 }
 
+
+// API Controller to get the details of
+// single car using car_id sent from the frontend
+
 exports.SINGLE_CARS_DETAILS = async (req, res) => {
 
     if(!req.query.car_id){
@@ -115,7 +131,11 @@ exports.SINGLE_CARS_DETAILS = async (req, res) => {
 
 }
 
-// pie charts of fuel type of cars - filters: price and company
+
+// API Controller to get the count of number of cars vs
+// the fuel type. For this api too, minimum price, maximum 
+// price and company's name filter can be added
+
 exports.FUEL_TYPE_OF_CARS = async (req, res) => {
 
     query = []
@@ -167,6 +187,12 @@ exports.FUEL_TYPE_OF_CARS = async (req, res) => {
     return res.status(200).json(data)
 
 }
+
+
+
+// API Controller for getting the count of number of car
+// vs body type of the car. Here also min price, max price and
+// company filters are provided
 
 exports.BODY_TYPE_OF_CARS = async (req, res) => {
 
@@ -220,6 +246,11 @@ exports.BODY_TYPE_OF_CARS = async (req, res) => {
 
 }
 
+
+// API Controller for getting the count of number of car
+// vs number of gears in the car. Here also min price, max price and
+// company filters are provided
+
 exports.NUMBER_OF_GEARS = async (req, res) => {
 
     query = []
@@ -271,6 +302,11 @@ exports.NUMBER_OF_GEARS = async (req, res) => {
     return res.status(200).json(data)
 
 }
+
+
+// API Controller for getting the count of number of car
+// vs type of car. Here also min price, max price and
+// company filters are provided
 
 exports.CAR_TYPE = async (req, res) => {
 
@@ -324,6 +360,12 @@ exports.CAR_TYPE = async (req, res) => {
 
 }
 
+
+// API Controller to get the average price of 
+// the cars against power. Here, Mongodb $group 
+// aggregation is used to calculate average price based on 
+// power groups.
+
 exports.POWER_VS_AVERAGE_PRICE = async (req, res) => {
 
     query = []
@@ -357,6 +399,12 @@ exports.POWER_VS_AVERAGE_PRICE = async (req, res) => {
     return res.status(200).json(data)
 }
 
+
+// API Controller to get the average city mileage of 
+// car vs the mode . Here, Mongodb $group 
+// aggregation is used to calculate average mileage based on 
+// car groups.
+
 exports.MODEL_VS_CITY_MILEAGE = async (req, res) => {
 
     query = []
@@ -389,6 +437,11 @@ exports.MODEL_VS_CITY_MILEAGE = async (req, res) => {
 
     return res.status(200).json(data)
 }
+
+
+// API Controller for getting the count of number of car
+// vs parking assistance available in them. Here also min price, max price and
+// company filters are provided
 
 exports.PARKING_ASSISTANCE = async (req, res) => {
 
@@ -441,6 +494,12 @@ exports.PARKING_ASSISTANCE = async (req, res) => {
     return res.status(200).json(data)
 
 }
+
+
+// API Controller to get the count of number of cars vs
+// the basic properties they provide. Here, mongodb $facet
+// aggregate is used to query 5 different properties and
+// calculate their count in a single query.
 
 exports.COUNT_CARS_BASIC_PROPERTIES = async (req, res) => {
 
