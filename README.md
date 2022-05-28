@@ -17,15 +17,15 @@ Backend Repository for Engage'22 project
 
    **Getting started**
 
-- Install dependencies: `npm install`
-- Start the project: `nodemon app`
+      - Install dependencies: `npm install`
+      - Start the project: `nodemon app`
 
 5. **Before running/executing the fontend file in your ide, open terminal and write:**
 
    **Getting started**
 
-- Recommended `node js 14.x` and `npm 6+`
-- Install dependencies: `npm install` or `yarn install`
-- Start the project: `npm run start` or `yarn start`
+      - Recommended `node js 14.x` and `npm 6+`
+      - Install dependencies: `npm install` or `yarn install`
+      - Start the project: `npm run start` or `yarn start`
 
 6. During using the application, when searching for "Company Name" (under Company Details), do remember that the Company name is case sensetive as per the database used in the backend. So, write the Company Name same as given in the dataset.
