@@ -11,7 +11,7 @@ Backend Repository for Engage'22 project
 
 3. Now, in the backend, in the "services" folder go to "db.connection.js" file, go on line -
 
-var inst1 = mongoose.createConnection(paste the link of your MongoDB database)
+- var inst1 = mongoose.createConnection(paste the link of your MongoDB database)
 
 4. **Before running/executing the backend file in your ide, open terminal and write:**
 
