@@ -15,7 +15,7 @@ Backend Repository for Engage'22 project
 
 4. **Before running/executing the backend file in your ide, open terminal and write:**
 
-  **Getting started**
+   **Getting started**
 
 - Install dependencies: `npm install`
 - Start the project: `nodemon app`
